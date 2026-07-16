@@ -1,9 +1,9 @@
-# @workflow/core
+# @workflow-eps/core
 
 Zero-dependency TypeScript pipeline orchestration library with DAG-based scheduling, resilience policies, and structured observability.
 
 <!-- Badges placeholder -->
-<!-- [![npm version](https://img.shields.io/npm/v/@workflow/core)](https://www.npmjs.com/package/@workflow/core) -->
+<!-- [![npm version](https://img.shields.io/npm/v/@workflow-eps/core)](https://www.npmjs.com/package/@workflow-eps/core) -->
 <!-- [![CI](https://github.com/your-org/workflow-core/actions/workflows/ci.yml/badge.svg)](https://github.com/your-org/workflow-core/actions) -->
 <!-- [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE) -->
 
@@ -32,15 +32,15 @@ Zero-dependency TypeScript pipeline orchestration library with DAG-based schedul
 ## Installation
 
 ```bash
-npm install @workflow/core
+npm install @workflow-eps/core
 ```
 
 ```bash
-yarn add @workflow/core
+yarn add @workflow-eps/core
 ```
 
 ```bash
-pnpm add @workflow/core
+pnpm add @workflow-eps/core
 ```
 
 Requires Node.js >= 18.0.0.
@@ -48,7 +48,7 @@ Requires Node.js >= 18.0.0.
 ## Quick Start
 
 ```typescript
-import { createPipeline } from "@workflow/core";
+import { createPipeline } from "@workflow-eps/core";
 
 const result = await createPipeline("greeting")
   .step("FetchUser", async (ctx) => {
@@ -80,7 +80,7 @@ console.log(result.getValue<string>("BuildGreeting")); // "Hello, Alice!"
 Creates a new pipeline builder instance.
 
 ```typescript
-import { createPipeline } from "@workflow/core";
+import { createPipeline } from "@workflow-eps/core";
 
 const pipeline = createPipeline<{ userId: string }>("order-flow");
 ```
@@ -369,7 +369,7 @@ Step result statuses:
 Accepts any object implementing the `Logger` interface:
 
 ```typescript
-import { createPipeline, ConsoleLogger } from "@workflow/core";
+import { createPipeline, ConsoleLogger } from "@workflow-eps/core";
 
 createPipeline("observed")
   .withLogger(new ConsoleLogger("my-app"))
@@ -391,7 +391,7 @@ interface Logger {
 #### `.withMetrics(collector)`
 
 ```typescript
-import { createPipeline, InMemoryMetrics } from "@workflow/core";
+import { createPipeline, InMemoryMetrics } from "@workflow-eps/core";
 
 const metrics = new InMemoryMetrics();
 
@@ -531,7 +531,7 @@ const result = await createPipeline("export-job")
 ### Error Transformation
 
 ```typescript
-import { createPipeline } from "@workflow/core";
+import { createPipeline } from "@workflow-eps/core";
 
 class AppError extends Error {
   constructor(public code: string, message: string, options?: ErrorOptions) {
@@ -591,7 +591,7 @@ const result = await createPipeline<FeatureFlags>("conditional")
 ### Full Real-World Pipeline
 
 ```typescript
-import { createPipeline, ConsoleLogger, InMemoryMetrics } from "@workflow/core";
+import { createPipeline, ConsoleLogger, InMemoryMetrics } from "@workflow-eps/core";
 
 interface OrderContext {
   customerId: string;

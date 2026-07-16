@@ -66,5 +66,5 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: Number('${{ github.event.inputs.pr_number }}'),
-              body: `📦 Preview package published!\n\n\`\`\`\nnpm install @workflow/core@${version}\n\`\`\`\n\nInstall with:\n\`\`\`bash\nnpm install @workflow/core@pr\n\`\`\`\n\nVersion: \`${version}\``
+              body: `📦 Preview package published!\n\n\`\`\`\nnpm install @workflow-eps/core@${version}\n\`\`\`\n\nInstall with:\n\`\`\`bash\nnpm install @workflow-eps/core@pr\n\`\`\`\n\nVersion: \`${version}\``
             });

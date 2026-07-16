@@ -1,5 +1,5 @@
 {
-  "name": "@workflow/core",
+  "name": "@workflow-eps/core",
   "version": "0.0.2",
   "description": "Zero-dependency TypeScript pipeline orchestration library",
   "type": "module",
