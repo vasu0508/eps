@@ -2,10 +2,10 @@
 
 Zero-dependency TypeScript pipeline orchestration library with DAG-based scheduling, resilience policies, and structured observability.
 
-<!-- Badges placeholder -->
-<!-- [![npm version](https://img.shields.io/npm/v/@workflow-eps/core)](https://www.npmjs.com/package/@workflow-eps/core) -->
-<!-- [![CI](https://github.com/your-org/workflow-core/actions/workflows/ci.yml/badge.svg)](https://github.com/your-org/workflow-core/actions) -->
-<!-- [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE) -->
+[![npm version](https://img.shields.io/npm/v/@workflow-eps/core)](https://www.npmjs.com/package/@workflow-eps/core)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
+📦 **npm:** https://www.npmjs.com/package/@workflow-eps/core
 
 ## Features
 
